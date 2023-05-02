@@ -1,6 +1,6 @@
 import { FaRegSave } from 'react-icons/fa';
 import { porExtenso } from 'numero-por-extenso';
-import '../textInputs/TextInput.css'
+import './NumberConvert.css'
 
 
 function NumberConverter({number, setNumber, saveNumber}){
@@ -11,14 +11,14 @@ function NumberConverter({number, setNumber, saveNumber}){
     async function convertNumber(e){
         e.preventDefault()
         try {
-        if(isNumber(number)){
-            saveNumber(String(number), porExtenso(String(number)))
-        }
-        else{
-            alert('Conteudo digitado não corresponde a um valor válido');
-            return;
-        }} catch {
-        alert('Ocorreu um erro ao coverter o número!')
+            if(isNumber(number)){
+                saveNumber(String(number), porExtenso(String(number)))
+            }
+            else{
+                alert('Conteudo digitado não corresponde a um valor númerico');
+            }
+        } catch {
+            alert('Ocorreu um erro ao coverter o número!')
         }
         setNumber('');
     }

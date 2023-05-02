@@ -5,13 +5,13 @@ import { useEffect, useState } from 'react';
 import { getDocs, collection } from "firebase/firestore";
 
 function HomePage(){
-    const [users, setUsers] = useState([]);
+    const [numbers, setNumbers] = useState([]);
 
     useEffect(() => {
         const userCollectionRef = collection(DBFirebase(), 'numbers')
         const getUser = async () => {
             const data = await getDocs(userCollectionRef)
-            setUsers(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
+            setNumbers(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
         
         }
         getUser()
@@ -30,7 +30,7 @@ function HomePage(){
                         <th className='separator'>{'-'}</th>
                         <th>Por extenso</th>
                     </div>
-                    {users.map((num)=>{
+                    {numbers.map((num)=>{
                         return(
                             <div key={num.id} className='result'>
                                 <td className='resultNumber'>{num.number}</td>

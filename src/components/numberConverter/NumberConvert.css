@@ -18,3 +18,17 @@
 .containerInput input::placeholder{
     color: #FFFF;
 }
+
+
+.buttonSave{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #FFFF;
+    padding-right: 5px;
+    transition: transform 0.5s;
+}
+
+.buttonSave:hover{
+    transform: scale(1.2);
+}

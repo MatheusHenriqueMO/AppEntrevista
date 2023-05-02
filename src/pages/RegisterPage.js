@@ -1,6 +1,3 @@
-
-
-
 import '../styles.css'
 import RegisterForm from '../components/registerForm/RegisterForm';
 
