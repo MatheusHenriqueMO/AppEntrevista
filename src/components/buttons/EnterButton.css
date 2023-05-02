@@ -1,0 +1,22 @@
+.enterButton{
+    border-radius: 15px;
+    padding: 10px;
+    padding-left: 15px;
+    padding-right: 15px;
+    border: none;
+    background-color: #1D71CE;
+    color: #FFFF;
+    cursor: pointer;
+    transition: 0.5s;
+}
+
+.enterButton:hover{
+    color: #000
+}
+
+.containerButton{
+    padding: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

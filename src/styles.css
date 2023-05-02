@@ -1,0 +1,55 @@
+.container{
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(#00003f, #3318e8);
+}
+
+.title{
+    padding: 30px;
+    color: #FFFF;
+}
+
+.buttonSave{
+    background-color: transparent;
+    outline: none;
+    border: none;
+    color: #FFFF;
+    padding-right: 5px;
+    transition: transform 0.5s;
+}
+
+.buttonSave:hover{
+    transform: scale(1.2);
+}
+
+/* CSS da tabela da pagina home*/
+
+.result{
+    font-size: 20px;
+    color: #1b325f;
+    list-style: none;
+    background-color: #9cc4e4;
+    padding: 10px;
+}
+
+.titleTable{
+    font-size: 20px;
+    color: #f26c4f;
+    list-style: none;
+    background-color: #1b325f;
+    padding: 10px;
+}
+
+
+.resultNumber{
+    width: 5vh;
+}
+
+.separator{
+    width: 2vh;
+}
+
+
