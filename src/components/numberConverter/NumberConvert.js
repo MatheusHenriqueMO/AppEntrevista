@@ -5,9 +5,10 @@ import './NumberConvert.css'
 
 function NumberConverter({number, setNumber, saveNumber}){
     
-    function isNumber(n) {
-        return !isNaN(parseFloat(n)) && isFinite(n);
+    function isNumber(num) {
+        return !isNaN(parseFloat(num)) && isFinite(num);
     } 
+
     async function convertNumber(e){
         e.preventDefault()
         try {

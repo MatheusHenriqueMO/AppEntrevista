@@ -1,22 +1,22 @@
 import '../styles.css'
 import DBFirebase from '../services/DBFirebase';
 
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 import { getDocs, collection } from "firebase/firestore";
 
 function HomePage(){
     const [numbers, setNumbers] = useState([]);
 
-    useEffect(() => {
-        const userCollectionRef = collection(DBFirebase(), 'numbers')
-        const getUser = async () => {
-            const data = await getDocs(userCollectionRef)
-            setNumbers(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
+
         
-        }
-        getUser()
+    const getUser = async () => {
+        const config = collection(DBFirebase(), 'numbers')
+        const data = await getDocs(config)
+        setNumbers(data.docs.map((doc) => ({...doc.data(), id: doc.id})));
         
-    },)
+    }
+    getUser()
+
 
 
     
